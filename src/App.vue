@@ -1,23 +1,5 @@
 <template>
-  <div class="side-bar">
-    <div class="top">
-      <router-link to="/">
-        <h1>Instavape</h1>
-      </router-link>
-      <nav>
-        <ul>
-          <li>
-            <router-link to="/">
-              <HomeIconVue width="2.8" height="2.8" />
-              <caption>
-                홈
-              </caption>
-            </router-link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+  <SideBarVue />
   <router-view class="router" />
 </template>
 
@@ -60,66 +42,11 @@ a {
   transition: all 200ms ease-in-out;
 }
 
-.side-bar {
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 20rem;
-  border-right: 0.1rem solid #aaa;
-  padding: 2.4rem 1.6rem;
-
-  > .top {
-    width: 100%;
-
-    > a {
-      > h1 {
-        padding-left: 0.8rem;
-        font-family: "billabong", sans-serif;
-        font-size: 2.8rem;
-        font-weight: 500;
-        text-align: start;
-      }
-    }
-
-    > nav {
-      margin-top: 2.4rem;
-
-      > ul {
-        list-style: none;
-        text-align: start;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-
-        > li {
-          > a {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            border-radius: 0.8rem;
-            padding: 0.4rem;
-
-            &:hover {
-              background-color: var(--sub-bg);
-            }
-
-            caption {
-              font-size: 1.4rem;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 .router {
   flex: 1;
 }
 </style>
 
 <script setup lang="ts">
-import HomeIconVue from "@/assets/icons/HomeIcon.vue";
+import SideBarVue from "@/components/SideBar.vue";
 </script>
