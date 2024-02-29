@@ -10,8 +10,8 @@
             <router-link to="/">
               <HomeIconVue
                 :selected="$route.path === '/'"
-                width="3.6"
-                height="3.6"
+                width="2.8"
+                height="2.8"
               />
               <caption :class="{ selected: $route.path === '/' }">
                 홈
@@ -22,8 +22,8 @@
             <router-link to="/search">
               <SearchIconVue
                 :selected="$route.path === '/search'"
-                width="3.6"
-                height="3.6"
+                width="2.8"
+                height="2.8"
               />
               <caption :class="{ selected: $route.path === '/search' }">
                 검색
@@ -33,8 +33,8 @@
           <li>
             <router-link to="/device">
               <DeviceIconVue
-                width="3.6"
-                height="3.6"
+                width="2.8"
+                height="2.8"
                 :selected="$route.path === '/device'"
               />
               <caption :class="{ selected: $route.path === '/device' }">
@@ -46,8 +46,8 @@
             <router-link to="/liquid">
               <LiquidIconVue
                 :selected="$route.path === '/liquid'"
-                width="3.6"
-                height="3.6"
+                width="2.8"
+                height="2.8"
               />
               <caption :class="{ selected: $route.path === '/liquid' }">
                 액상 둘러보기
@@ -58,8 +58,8 @@
             <router-link to="/atomizer">
               <AtomizerIconVue
                 :selected="$route.path === '/atomizer'"
-                width="3.6"
-                height="3.6"
+                width="2.8"
+                height="2.8"
               />
               <caption :class="{ selected: $route.path === '/atomizer' }">
                 무화기 둘러보기
@@ -68,10 +68,10 @@
           </li>
           <li>
             <router-link to="/coil">
-              <SearchIconVue
+              <CoilIconVue
                 :selected="$route.path === '/coil'"
-                width="3.6"
-                height="3.6"
+                width="2.8"
+                height="2.8"
               />
               <caption :class="{ selected: $route.path === '/coil' }">
                 코일 둘러보기
@@ -80,18 +80,58 @@
           </li>
           <li>
             <router-link to="/accesory">
-              <SearchIconVue
+              <AccesoryIconVue
                 :selected="$route.path === '/accesory'"
-                width="3.6"
-                height="3.6"
+                width="2.8"
+                height="2.8"
               />
               <caption :class="{ selected: $route.path === '/accesory' }">
                 악세사리 둘러보기
               </caption>
             </router-link>
           </li>
+          <li>
+            <router-link to="/profile">
+              <ProfileIconVue
+                :selected="$route.path === '/profile'"
+                width="2.8"
+                height="2.8"
+              />
+              <caption :class="{ selected: $route.path === '/profile' }">
+                프로필
+              </caption>
+            </router-link>
+          </li>
         </ul>
       </nav>
+    </div>
+    <div class="bottom">
+      <ul>
+        <li>
+          <router-link to="/cart">
+            <CartIconVue
+              :selected="$route.path === '/cart'"
+              width="2.8"
+              height="2.8"
+            />
+            <caption :class="{ selected: $route.path === '/cart' }">
+              장바구니
+            </caption>
+          </router-link>
+        </li>
+        <li>
+          <button @click="isSelectedEtcButton = !isSelectedEtcButton">
+            <EtcIconVue
+              :selected="isSelectedEtcButton"
+              width="2.8"
+              height="2.8"
+            />
+            <caption :class="{ selected: isSelectedEtcButton }">
+              더 보기
+            </caption>
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -103,9 +143,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 28rem;
-  border-right: 0.1rem solid #aaa;
-  padding: 2.4rem 1.6rem;
+  width: 24rem;
+  border-right: 0.1rem solid var(--border);
+  padding: 2.8rem 1.6rem;
+  height: 100%;
 
   > .top {
     width: 100%;
@@ -128,7 +169,7 @@
         text-align: start;
         display: flex;
         flex-direction: column;
-        gap: 1.2rem;
+        gap: 1.6rem;
 
         > li {
           > a {
@@ -155,6 +196,46 @@
       }
     }
   }
+
+  > .bottom {
+    width: 100%;
+
+    > ul {
+      list-style: none;
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+
+      > li {
+        > a,
+        button {
+          cursor: pointer;
+          width: 100%;
+          border: none;
+          background: none;
+          display: flex;
+          align-items: center;
+          gap: 1.2rem;
+          border-radius: 0.8rem;
+          padding: 0.6rem;
+
+          &:hover {
+            background-color: var(--sub-bg);
+          }
+
+          caption {
+            font-size: 1.6rem;
+            font-weight: 500;
+
+            &.selected {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 </style>
 
@@ -164,4 +245,12 @@ import SearchIconVue from "@/assets/icons/SearchIcon.vue";
 import DeviceIconVue from "@/assets/icons/DeviceIcon.vue";
 import LiquidIconVue from "@/assets/icons/LiquidIcon.vue";
 import AtomizerIconVue from "@/assets/icons/AtomizerIcon.vue";
+import CoilIconVue from "@/assets/icons/CoilIcon.vue";
+import AccesoryIconVue from "@/assets/icons/AccesoryIcon.vue";
+import ProfileIconVue from "@/assets/icons/ProfileIcon.vue";
+import CartIconVue from "@/assets/icons/CartIcon.vue";
+import EtcIconVue from "@/assets/icons/EtcIcon.vue";
+import { ref } from "vue";
+
+const isSelectedEtcButton = ref(false);
 </script>
