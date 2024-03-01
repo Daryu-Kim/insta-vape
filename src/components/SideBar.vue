@@ -129,6 +129,7 @@
             <caption :class="{ selected: isSelectedEtcButton }">
               더 보기
             </caption>
+            <Menu :visible="isSelectedEtcButton"></Menu>
           </button>
         </li>
       </ul>
@@ -145,15 +146,16 @@
   align-items: flex-start;
   width: 24rem;
   border-right: 0.1rem solid var(--border);
-  padding: 2.8rem 1.6rem;
+  padding: 2.8rem 1rem;
   height: 100%;
 
   > .top {
     width: 100%;
+    margin-top: 0.8rem;
 
     > a {
       > h1 {
-        padding-left: 0.8rem;
+        padding-left: 1.6rem;
         font-family: "billabong", sans-serif;
         font-size: 3.6rem;
         font-weight: 500;
@@ -169,7 +171,7 @@
         text-align: start;
         display: flex;
         flex-direction: column;
-        gap: 1.6rem;
+        gap: 0.8rem;
 
         > li {
           > a {
@@ -177,7 +179,7 @@
             align-items: center;
             gap: 1.2rem;
             border-radius: 0.8rem;
-            padding: 0.6rem;
+            padding: 1.2rem;
 
             &:hover {
               background-color: var(--sub-bg);
@@ -205,7 +207,7 @@
       text-align: start;
       display: flex;
       flex-direction: column;
-      gap: 1.6rem;
+      gap: 0.8rem;
 
       > li {
         > a,
@@ -218,7 +220,7 @@
           align-items: center;
           gap: 1.2rem;
           border-radius: 0.8rem;
-          padding: 0.6rem;
+          padding: 1.2rem;
 
           &:hover {
             background-color: var(--sub-bg);
@@ -251,6 +253,11 @@ import ProfileIconVue from "@/assets/icons/ProfileIcon.vue";
 import CartIconVue from "@/assets/icons/CartIcon.vue";
 import EtcIconVue from "@/assets/icons/EtcIcon.vue";
 import { ref } from "vue";
+import Menu from "@/components/MoreMenu.vue";
 
 const isSelectedEtcButton = ref(false);
+
+const hideMenu = () => {
+  isSelectedEtcButton.value = false;
+};
 </script>
