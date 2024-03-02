@@ -1,5 +1,11 @@
 <template>
-  <SideBarVue />
+  <SideBarVue
+    v-if="
+      $router.currentRoute.value.name !== 'login' &&
+      $router.currentRoute.value.name !== 'join' &&
+      $router.currentRoute.value.name !== 'password-reset'
+    "
+  />
   <router-view class="router" />
 </template>
 

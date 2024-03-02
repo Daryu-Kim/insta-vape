@@ -318,6 +318,7 @@
             }
             > .created {
               color: var(--secondary);
+              font-weight: 400;
             }
           }
         }

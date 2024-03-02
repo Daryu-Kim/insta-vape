@@ -1,5 +1,5 @@
 <template>
-  <div class="side-bar">
+  <div class="side-bar" @click.self="isSelectedEtcButton = false">
     <div class="top">
       <router-link to="/">
         <h1>Instavape</h1>
@@ -256,8 +256,4 @@ import { ref } from "vue";
 import Menu from "@/components/MoreMenu.vue";
 
 const isSelectedEtcButton = ref(false);
-
-const hideMenu = () => {
-  isSelectedEtcButton.value = false;
-};
 </script>

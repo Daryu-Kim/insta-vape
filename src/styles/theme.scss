@@ -3,7 +3,10 @@ $LIGHT_THEME: (   // 라이트 테마 변수 선언
   sub-bg: #eee,  // 보조 배경 색상
   thd-bg: #ddd,  // 3차 보조 배경 색상
   fou-bg: #ccc,
-  border: #ccc,
+  border: #ddd,
+  dialog-bg: #fff,
+  hover-bg: #eee,
+  form-bg: #f7f7f7,
   overlay-gradient-bg: #040008,   // 오버레이 그라데이션 배경 색상
   primary: #101010,   // 기본 색상
   secondary: #666,
@@ -16,15 +19,24 @@ $LIGHT_THEME: (   // 라이트 테마 변수 선언
   sub: #666,  // 보조 색상
   sub-semi-light: #888,   // 보조 색상 반 밝은 버전
   sub-light: #aaa,  // 보조 색상 밝은 버전
-  sub-more-light: #ccc // 보조 색상 더 밝은 버전
+  sub-more-light: #ccc, // 보조 색상 더 밝은 버전
+  shadow: rgba($color: #000000, $alpha: 0.25),
+  discord: #5865F2,
+  facebook: #0866FF,
+  google: #4285F4,
+  kakao: #FFCD00,
+  x: #000000,
 );
 
 $DARK_THEME: (  // 다크 테마 변수 선언
-  bg: #101010,  // 배경 색상
-  sub-bg: #202020,  // 보조 배경 색상
-  thd-bg: #303030,  // 3차 보조 배경 색상
-  fou-bg: #404040,
-  border: #404040,
+  bg: #000,  // 배경 색상
+  sub-bg: #111,  // 보조 배경 색상
+  thd-bg: #222,  // 3차 보조 배경 색상
+  fou-bg: #333,
+  border: #333,
+  dialog-bg: #222,
+  hover-bg: #333,
+  form-bg: #191919,
   overlay-gradient-bg: #040008,   // 오버레이 그라데이션 배경 색상
   primary: #fff,  // 기본 색상
   secondary: #aaa,
@@ -37,7 +49,13 @@ $DARK_THEME: (  // 다크 테마 변수 선언
   sub: #666,  // 보조 색상
   sub-semi-light: #888,   // 보조 색상 반 밝은 버전
   sub-light: #aaa,  // 보조 색상 밝은 버전
-  sub-more-light: #ccc // 보조 색상 더 밝은 버전
+  sub-more-light: #ccc, // 보조 색상 더 밝은 버전
+  shadow: rgba($color: #000000, $alpha: 0.5),
+  discord: #5865F2,
+  facebook: #0866FF,
+  google: #4285F4,
+  kakao: #FFCD00,
+  x: #FFFFFF,
 );
 
 :root {   // 루트 요소 선택자
