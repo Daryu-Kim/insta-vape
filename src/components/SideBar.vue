@@ -31,6 +31,30 @@
             </router-link>
           </li>
           <li>
+            <router-link to="/beginner">
+              <BeginnerIconVue
+                width="2.8"
+                height="2.8"
+                :selected="$route.path === '/beginner'"
+              />
+              <caption :class="{ selected: $route.path === '/beginner' }">
+                입문용 둘러보기
+              </caption>
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/subscribe">
+              <SubscribeIconVue
+                width="2.8"
+                height="2.8"
+                :selected="$route.path === '/subscribe'"
+              />
+              <caption :class="{ selected: $route.path === '/subscribe' }">
+                정기구독 둘러보기
+              </caption>
+            </router-link>
+          </li>
+          <li>
             <router-link to="/device">
               <DeviceIconVue
                 width="2.8"
@@ -244,6 +268,8 @@
 <script setup lang="ts">
 import HomeIconVue from "@/assets/icons/HomeIcon.vue";
 import SearchIconVue from "@/assets/icons/SearchIcon.vue";
+import BeginnerIconVue from "@/assets/icons/BeginnerIcon.vue";
+import SubscribeIconVue from "@/assets/icons/SubscribeIcon.vue";
 import DeviceIconVue from "@/assets/icons/DeviceIcon.vue";
 import LiquidIconVue from "@/assets/icons/LiquidIcon.vue";
 import AtomizerIconVue from "@/assets/icons/AtomizerIcon.vue";

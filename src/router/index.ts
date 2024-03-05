@@ -4,6 +4,13 @@ import LoginView from "@/views/LoginView.vue";
 import JoinView from "@/views/JoinView.vue";
 import PasswordResetView from "@/views/PasswordResetView.vue";
 import NotFoundView from "@/views/NotFoundView.vue";
+import BeginnerView from "@/views/BeginnerView.vue";
+import SubscribeView from "@/views/SubscribeView.vue";
+import DeviceView from "@/views/DeviceView.vue";
+import LiquidView from "@/views/LiquidView.vue";
+import AtomizerView from "@/views/AtomizerView.vue";
+import CoilView from "@/views/CoilView.vue";
+import AccesoryView from "@/views/AccesoryView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -25,6 +32,41 @@ const routes: Array<RouteRecordRaw> = [
     path: "/password-reset",
     name: "password-reset",
     component: PasswordResetView,
+  },
+  {
+    path: "/beginner",
+    name: "beginner",
+    component: BeginnerView,
+  },
+  {
+    path: "/subscribe",
+    name: "subscribe",
+    component: SubscribeView,
+  },
+  {
+    path: "/device",
+    name: "device",
+    component: DeviceView,
+  },
+  {
+    path: "/liquid",
+    name: "liquid",
+    component: LiquidView,
+  },
+  {
+    path: "/atomizer",
+    name: "atomizer",
+    component: AtomizerView,
+  },
+  {
+    path: "/coil",
+    name: "coil",
+    component: CoilView,
+  },
+  {
+    path: "/accesory",
+    name: "accesory",
+    component: AccesoryView,
   },
   {
     path: "/notFound",
